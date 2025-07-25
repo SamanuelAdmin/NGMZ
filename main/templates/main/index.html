@@ -1,0 +1,69 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="preview-box container-wrapper" style="background-image: url({% static 'main/media/slider/slider1.jpg' %})">
+        <div class="preview container">
+            <div class="title">
+                Інноваційні рішення для майбутнього
+            </div>
+
+            <div class="body">
+                <li class="el">У виробництві використовуються лише <a class="selected smartlink">високоякісні матеріали</a>, суворо дотримуються норми та вимоги технологічної документації. </li>
+                <li class="el"><a class="selected smartlink">Сучасне обладнення</a> з інтегрованою системою управління якістю для виробничих продуктів.  </li>
+                <li class="el">Існує також <a class="selected smartlink">можливість ремонту</a> промислового обладнання, включаючи капітальний ремонт.  </li>
+                <li class="el">ТОВ "НГМЗ" має сертефікат на <a class="selected smartlink">систему управління якістю ISO</a>.
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="main-info container">
+            <p class="text first-text">
+                <b>ТОВ «Новгородський гідро-механічний завод»</b> є провідним виробником обладнання для гірничодобувної, вугільної, металургійної промисловості та енергетичної галузі.
+		Завод в виробничо-технічній діяльності  використовує сучасне високотехнологічне  металообробне  та термічне обладнання для виконання токарних, фрезерувальних, зубодовбальних, шліфувальних та стрічково-розпилювальних технологічних операцій з метою виробництва високоякісної, в тому числі й унікальної, машинобудівної  продукції та виконання інших складних  інженерно-технічних  робіт.
+                Ми дотримуємося норм та вимог конструкторсько-технологічної документації, технічних умов і державних стандартів, що гарантує надійність й довговічність нашої продукції.
+                Забезпечення якості під час виробництва та безумовне виконання договірних зобов'язань стали дієвими чинниками формування стійких довгострокових господарських взаємовідносин ТОВ "НГМЗ" із гірничорудними та енергетичними підприємствами України.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="example-photos container">
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/4.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/3.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/2.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/1.jpg' %}')"></div>
+        </div>
+    </div>
+
+    <div class="banner container-wrapper" style="background-image: url({% static 'main/media/main_page_banner.png' %})">
+        <div class="container">
+            <div class="title">
+                Ваша безпека, висока якість та продуктивність – наші головні пріоритети.
+                Ми пропонуємо комплексний підхід у вирішенні Ваших виробничих завдань.
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-us container-wrapper">
+        <div class="container">
+             <p>
+                 Ми завжди зацікавлені в проектах будь якого рівня складності та сподіваємося на подальшу співпрацю.
+             </p>
+            <b>
+                Ви можете зв'язатися з нами за цими контактами:
+            </b>
+
+            <div class="contacts">
+                <a class="number" href="tel:+380503266872">+38 (050) 326-68-72</a>
+                <a class="number" href="tel:+380995448606">+38 (099) 544-86-06</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/about.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="preview container-wrapper"
+        style="
+                background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                url({% static 'main/media/about_us_preview.png' %})
+        "
+    >
+        <div class="container">
+            <div class="description">
+                ТОВ «НГМЗ» — це сучасне машинобудівне підприємство, яке зберігає та розвиває інженерні традиції, виготовляючи надійне й високоякісне обладнання для гірничодобувної, вугільної та металургійної промисловості.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content container-wrapper">
+        <div class="container">
+            <div class="small-description">
+                Протягом багатьох років «НГМЗ» займає провідні позиції в галузі проєктування, виробництва та ремонту обладнання для гірничих і збагачувальних підприємств. Наша команда — це інженери, конструктори, технологи та виробники з великим досвідом і відданістю своїй справі.
+                <b>Надійність. Якість. Інновації. Ці принципи — основа нашої роботи.</b>
+            </div>
+
+            <div class="photo-container">
+                <div class="main-photo" style="background-image: url('{% static "main/media/about_page_blocks/main.jpg" %}')"></div>
+                <div style="background-image: url('{% static "main/media/about_page_blocks/1.jpg" %}')"></div>
+                <div style="background-image: url('{% static "main/media/about_page_blocks/2.jpg" %}')"></div>
+                <div style="background-image: url('{% static "main/media/about_page_blocks/3.jpg" %}')"></div>
+                <div style="background-image: url('{% static "main/media/about_page_blocks/4.jpg" %}')"></div>
+                <div style="background-image: url('{% static "main/media/about_page_blocks/5.jpg" %}')"></div>
+            </div>
+
+            <div class="production-slogan"
+            style="
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+                    url({% static 'main/media/about_us_background_2.png' %})
+                ">
+                <div class="text">
+                    Кожен виріб — це результат точного розрахунку, відпрацьованої технології та суворого контролю.
+                </div>
+            </div>
+
+            <div class="slideshow-container">
+                {% for media in aboutUsMedia %}
+                    <div class="mySlides fade">
+                        <img src="{{ media }}" style="width:100%" onclick="viewImage(this);">
+                    </div>
+                {% endfor %}
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="certificates">
+                <div class="active-groud-title" onclick="openCloseCertMenu();">
+                    <a>Наші сертифікати</a>
+                    <img class="menu-icon" src="{% static 'main/media/icons/block-menu.png' %}">
+                </div>
+
+                <div class="photos" id="certificatesBox">
+                    {% for cert in certificates %}
+                        <img onclick="viewImage(this);" src="{{ cert }}" class="certificate fade-out">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{#    LOAD ALL JS #}
+    <script src="{% static 'main/js/certificates_active_menu.js' %}"></script>
+    <script src="{% static 'main/js/about_us_slider.js' %}"></script>
+{% endblock %}

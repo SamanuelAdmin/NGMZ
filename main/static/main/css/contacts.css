@@ -1,0 +1,347 @@
+.main-info {
+    min-height: 100vh;
+    height: auto;
+    flex-wrap: wrap;
+    margin-bottom: 0 !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .container {
+        margin: 20px 0;
+        max-height: 100%;
+        /*display: grid;*/
+        /*grid-template-columns: 5fr 2.5fr 2.5fr;*/
+        /*grid-template-rows: 1fr;*/
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        color: var(--white);
+
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 30px;
+            max-width: 50%;
+
+            .title {
+                width: 100%;
+                font-size: 40px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                color: var(--orange);
+            }
+
+            .contacts-section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: start;
+                gap: 10px;
+
+                .section-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .icon {
+                        width: 20px;
+                    }
+
+                    .text {
+                        color: var(--blue);
+                        font-size: 32px;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                    }
+                }
+
+                .section-body {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    .contact {
+                        font-size: 22px;
+                        color: var(--white);
+
+                        &:hover {
+                            color: var(--blue);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .timetable {
+            max-width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 15px;
+
+            .title {
+                margin-top: 10px;
+                width: 100%;
+                font-size: 30px;
+                text-align: center;
+                padding-bottom: 5px;
+                border-bottom: 3px var(--metal) solid;
+                color: var(--orange);
+            }
+
+            .body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 21px;
+
+                .row {
+                    margin: 0px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-weight: bold;
+
+                    .day {
+                        justify-self: start;
+                    }
+
+                    .from-to {
+                        text-align: end;
+                    }
+
+                    &:hover {
+                        color: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+
+    .leave-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        .title {
+            width: 100%;
+            text-align: center;
+            font-weight: 450;
+            font-size: 30px;
+        }
+
+        .form-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .form {
+                padding: 10px 30px;
+                width: 60%;
+                max-width: 90%;
+                min-height: 150px;
+                border: 1px var(--metal) solid;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin: 10px;
+
+                .contact-info {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+
+                    input {
+                        color: var(--white);
+                        width: 95%;
+                        border: none;
+                        border-bottom: 2px var(--metal) solid;
+                        font-size: 18px;
+                        padding: 3px 10px;
+                        background-color: transparent;
+
+                        &:focus {
+                            border-color: var(--white);
+                        }
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    resize: none;
+                    padding: 4px;
+                    color: var(--white);
+                    background-color: transparent;
+                }
+
+                .button-box {
+                    width: 100%;
+                    grid-column: span 2;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+
+                    .send-button {
+                        margin-top: 30px;
+                        /*max-width: 30%;*/
+                        padding: 10px 40px;
+                        font-size: 18px;
+                        background-color: transparent;
+                        color: var(--white);
+                        border: 2px var(--metal) solid;
+                        border-radius: 4px;
+
+                        &:hover {
+                            cursor: pointer;
+                            border-color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 875px) {
+    .main-info {
+        .leave-message {
+            margin-top: 40px;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .form-box {
+                margin-top: 20px;
+
+                .form {
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    textarea {
+                        padding: 10px;
+                        width: 95%;
+                        border: 1px var(--metal) solid;
+                        min-height: 150px;
+                    }
+
+                    .button-box {
+                        justify-content: end;
+
+                        .send-button {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .main-info .main-block {
+        flex-direction: column;
+        gap: 70px;
+
+        .contacts {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .timetable {
+            align-self: center;
+            width: 80%;
+            max-width: 100%;
+        }
+
+    }
+
+    .main-info .leave-message {
+
+        .form-box {
+            .form {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-info .main-block {
+        .contacts {
+            .title {
+                font-size: 27px;
+            }
+
+            .contacts-section {
+                .section-title {
+                    .icon {
+                        width: 17px;
+                    }
+
+                    .text {
+                        font-size: 22px;
+                    }
+                }
+
+                .section-body {
+                    .contact {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+
+        .timetable {
+            .title {
+                font-size: 26px;
+            }
+
+            .body {
+                .row {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .main-info .leave-message {
+        .title {
+            font-size: 22px;
+            width: 100%;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 100%;
+
+            .form {
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

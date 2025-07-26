@@ -182,11 +182,13 @@ div {
 
         .slideshow-container {
             width: auto;
-            height: 800px;
-            max-height: 800px;
+            height: 50vh;
+            max-height: 50vh;
+            position: relative;
             overflow: hidden;
             margin: auto;
             display: flex;
+            z-index: 0;
             align-items: center;
             justify-content: center;
             background-color: var(--metal);
@@ -207,7 +209,8 @@ div {
                 font-weight: bold;
                 font-size: 18px;
                 transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
+                border-radius: 0 1.5px 1.5px 0;
+                background-color: rgba(0, 0, 0, 0.4);
                 user-select: none;
 
                 &:hover, &:hover {
@@ -321,6 +324,7 @@ div {
             }
         }
     }
+
 
     .main-content .container .photo-container {
         grid-template-rows: repeat(4, 1fr);

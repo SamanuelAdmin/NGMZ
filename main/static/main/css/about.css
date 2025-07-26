@@ -185,7 +185,6 @@ div {
             height: 800px;
             max-height: 800px;
             overflow: hidden;
-            position: relative;
             margin: auto;
             display: flex;
             align-items: center;

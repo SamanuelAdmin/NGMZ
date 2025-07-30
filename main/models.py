@@ -2,13 +2,9 @@ from django.core.files.storage import FileSystemStorage
 from django.core.validators import FileExtensionValidator
 from django.db import models
 
-import random
 from os import path
 from uuid import uuid4
 
-import json
-
-from django.db.models import Q
 
 
 class UUIDFileStorage(FileSystemStorage):
@@ -40,20 +36,6 @@ class Info(models.Model):
         ordering = ('tag',)
         verbose_name = "Info"
         verbose_name_plural = "Info"
-
-
-class CategoryGroup(models.Model):
-    tag = models.SlugField(default='', max_length=25, unique=True)
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        db_table_comment = "Category (of products) groups"
-        ordering = ('tag',)
-        verbose_name = "Category Group"
-        verbose_name_plural = "Cat groups"
 
 
 class Category(models.Model):

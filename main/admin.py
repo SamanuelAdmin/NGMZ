@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from .models import *
 
@@ -11,22 +12,18 @@ class InfoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"tag": ("name",)}
 
 
-@admin.register(CategoryGroup)
-class CategoryGroupAdmin(admin.ModelAdmin):
-    list_display = ('tag', 'name')
-    list_filter = ('tag', 'name')
-    prepopulated_fields = {"tag": ("name",)}
-
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     list_display = ('tag', 'name')
     list_filter = ('tag', 'name')
-    prepopulated_fields = {"tag": ("name",)}
+    search_fields = ('name_uk', "name_en")
+    prepopulated_fields = {"tag": ("name_uk",)}
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslationAdmin):
     list_display = ('tag', 'name')
     list_filter = ('tag', 'name')
-    prepopulated_fields = {"tag": ("name",)}
+    search_fields = ('name_uk', "name_en")
+    prepopulated_fields = {"tag": ("name_uk",)}

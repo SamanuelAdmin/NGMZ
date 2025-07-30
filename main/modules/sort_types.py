@@ -1,6 +1,9 @@
+from django.utils.translation import gettext_lazy
+
+
 class SortType:
     def __init__(self, name, value, sorting):
-        self.name = name
+        self.name = gettext_lazy(name)
         self.value = value
         self.sorting = sorting
 
@@ -8,7 +11,7 @@ class SortType:
 
 
 productSortTypes = {
-    'new': SortType('За датою розміщення', 'new', '-addingTime'),
-    'a-z': SortType('За назвою (A-Z)', 'a-z', 'name'),
-    'z-a': SortType('За назвою (Z-A)', 'z-a', '-name'),
+    'new': SortType('ProductspageSortByDate', 'new', '-addingTime'),
+    'a-z': SortType('ProductspageSortByName', 'a-z', 'name'),
+    'z-a': SortType('ProductspageSortByMName', 'z-a', '-name'),
 }

@@ -1,9 +1,10 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="html">
     <head>
-        <title>{{ title }}</title>
+        <title>{{ title }} - {% trans 'ABCompanyName' %}</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -76,6 +77,24 @@
             </script>
         </div>
 
+
+        <div class="change-lang-field" id="changeLanguageWindow">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+            <div class="title">Choose your language: </div>
+
+            {% for language in languages %}
+                <form action="{% url 'set_language' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ language.code }}">
+                    <input class="setLanguageInput" type="submit" value="{{ language.name_local }} ({{ language.code }})" />
+                </form>
+            {% endfor %}
+        </div>
+
+
         <div class="image-viewer container-wrapper hidden" id="imageViewer">
             <img id="imageToView" class="container" src="{% static 'main/media/main_page/1.jpg' %}">
         </div>
@@ -90,13 +109,12 @@
                     <div class="menu">
                         {% for tag, link in mainMenu %}
                             <a class="menu-item {% if tag == menuSelect %}selected{% endif %}"
-                               href="{% url link %}">{{ tag }}</a>
+                               href="{% url link %}">{% trans tag %}</a>
                         {% endfor %}
                     </div>
 
                     <form class="search-form" method="get" action="{% url 'category' %}">
-                        <input class="search-input" type="text" name="query" placeholder="Search...">
-
+                        <input class="search-input" type="text" name="query" placeholder="{% trans 'SEARCH' %}...">
 
                         <button class="search-button" type="submit">
                             <img class="search-icon" src="{% static 'main/media/search.png' %}">
@@ -113,7 +131,7 @@
         <div class="footer-box container-wrapper">
             <div class="footer container">
                 <div class="title">
-                    Новгородський гiдро-механiчний завод
+                    {% trans 'FooterName' %}
                 </div>
 
                 <div class="logo">
@@ -121,8 +139,8 @@
                 </div>
 
                 <div class="footer-info-phone">
-                    <p>Phone: +38 (050) 326-68-72</p>
-                    <p>Phone: +38 (099) 544-86-06</p>
+                    <p>{% trans 'PHONE' %}: +38 (050) 326-68-72</p>
+                    <p>{% trans 'PHONE' %}: +38 (099) 544-86-06</p>
                 </div>
             </div>
         </div>
@@ -130,5 +148,6 @@
 
         <script src="{% static 'main/js/smooth_scroll.js' %}"></script>
         <script src="{% static 'main/js/image_viewer.js' %}"></script>
+        <script src="{% static 'main/js/on_set_lang.js' %}"></script>
     </body>
 </html>

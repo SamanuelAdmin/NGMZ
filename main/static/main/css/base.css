@@ -79,9 +79,51 @@ a {
     width: calc(100% - 20px);
 }
 
+.change-lang-field {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    z-index: 168;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+
+    .title {
+        text-align: center;
+        letter-spacing: 0.5px;
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    form input {
+        width: 250px;
+        padding: 15px;
+        background-color: transparent;
+        border: 3px var(--white) solid;
+        border-radius: 0;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: var(--white);
+
+        &:hover {
+            cursor: pointer;
+            color: var(--orange);
+            border-color: var(--orange);
+        }
+    }
+}
+
+
 .image-viewer {
     position: fixed;
-    z-index: 16777271;
+    z-index: 167;
     top: 0;
     left: 0;
     height: 100vh;
@@ -199,6 +241,7 @@ a {
 
 .messages-box {
     position: fixed;
+    z-index: 169;
     top: 0;
     left: 0;
     width: 100vw;
@@ -224,6 +267,7 @@ a {
 
 .loading-animation {
     position: fixed;
+    z-index: 170;
     top: 0;
     left: 0;
     width: 100vw;

@@ -7,6 +7,7 @@ from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.utils.translation import gettext_lazy, gettext
 
 from django.conf import settings
 from .models import *
@@ -16,11 +17,12 @@ from .modules.sort_types import *
 
 
 
+
 mainMenu = [
-    ('Головна', 'index'),
-    ('Продукція', 'category'),
-    ('Про нас', 'about'),
-    ('Контакти', 'contacts'),
+    (gettext_lazy("MainmenuMainPage"), 'index'),
+    (gettext_lazy("MainmenuProductionPage"), 'category'),
+    (gettext_lazy("MainmenuAboutPage"), 'about'),
+    (gettext_lazy("MainmenuContactsPage"), 'contacts'),
 ]
 
 
@@ -52,10 +54,13 @@ def renderPage(request, templateName, *args, **kwargs):
     return render(request, templateName, builtinArgs)
 
 
+def change_language(request, lang_code):
+    return redirect('index')
+
 def index_view(request):
     return renderPage(
         request, 'main/index.html',
-        title='NGMZ',
+        title=gettext_lazy('TitleMainPage'),
         menuSelect='main-page'
     )
 
@@ -69,7 +74,7 @@ def category_view(request, category=None):
     if not (searchQuery or category):
         return renderPage(
             request, 'main/category.html',
-            title='Products',
+            title=gettext_lazy('TitleProductsPage'),
             menuSelect='products',
             categories=categories,
         )
@@ -99,7 +104,7 @@ def category_view(request, category=None):
         category = get_object_or_404(Category, tag=category)
         products = Product.objects.filter(category=category)
 
-    title = f"Результат за запитом: {searchQuery}" if searchQuery else category.name
+    title = gettext_lazy('ProductspageSearchResult') + searchQuery if searchQuery else category.name
     productsPaginator = Paginator(
         products.order_by( currentSortingType.sort() ),
         currentPaginatorValue,
@@ -118,7 +123,7 @@ def category_view(request, category=None):
         products=productsPaginator.page(currentPage),
         orientation=orientation,
         paginator_values=paginatorValues, currentPaginatorValue=currentPaginatorValue,
-        maxPages=productsPaginator.num_pages,
+        currentPageString=gettext('Сторінка %(cpage)d з %(pages)d') % {'cpage': currentPage, 'pages': productsPaginator.num_pages},
         availableSortTypes=productSortTypes.values(),
     )
 
@@ -150,7 +155,7 @@ def about_view(request):
 
     return renderPage(
         request, 'main/about.html',
-        title='About us',
+        title=gettext_lazy('TitleAboutPage'),
         menuSelect='about',
         certificates=certificates,
         aboutUsMedia=aboutUsMedia
@@ -183,10 +188,10 @@ def contacts_view(request):
                     )
                 )
 
-            addMessage(request, 'Запит надіслано, ми зв\'яжемось з вами найближчим часом.')
+            addMessage(request, gettext_lazy('MessageRequestAccepted'))
 
     return renderPage(
         request, 'main/contacts.html',
-        title='Contacts',
+        title=gettext_lazy('TitleContactsPage'),
         menuSelect='contacts'
     )

@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block styles %}
@@ -14,11 +15,11 @@
              ">
         <div class="main-block container">
             <div class="contacts">
-                <div class="title">Зв'яжіться з нами</div>
+                <div class="title">{% trans 'ContactspageContactUs' %}</div>
                 <div class="contacts-section">
                     <div class="section-title">
                         <img class="icon" src="{% static 'main/media/icons/phone_2.png' %}">
-                        <div class="text">Телефон</div>
+                        <div class="text">{% trans 'PHONE' %}</div>
                     </div>
 
                     <div class="section-body">
@@ -65,56 +66,56 @@
 {#            <div class="empty"></div>#}
 
             <div class="timetable">
-                <div class="title">Графік роботи (UA)</div>
+                <div class="title">{% trans 'ContactspageTimetableTitle' %}</div>
                 <div class="body">
                     <div class="row">
-                        <div class="day">Понеділок</div>
+                        <div class="day">{% trans 'TimetableMon' %}</div>
                         <div class="from-to">9:00 - 17:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">Вівторок</div>
+                        <div class="day">{% trans 'TimetableTue' %}</div>
                         <div class="from-to">9:00 - 17:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">Середа</div>
+                        <div class="day">{% trans 'TimetableWed' %}</div>
                         <div class="from-to">9:00 - 17:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">Четвер</div>
+                        <div class="day">{% trans 'TimetableThu' %}</div>
                         <div class="from-to">9:00 - 17:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">П'ятниця</div>
+                        <div class="day">{% trans 'TimetableFri' %}</div>
                         <div class="from-to">9:00 - 17:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">Субота</div>
+                        <div class="day">{% trans 'TimetableSat' %}</div>
                         <div class="from-to">10:00 - 15:00</div>
                     </div>
                     <div class="row">
-                        <div class="day">Неділя</div>
-                        <div class="from-to">Вихідний</div>
+                        <div class="day">{% trans 'TimetableSun' %}</div>
+                        <div class="from-to">{% trans 'TimetableClosed' %}</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="leave-message container">
-            <div class="title">Або можете залишити повідомлення і ми з вами зв'яжемося</div>
+            <div class="title">{% trans 'ContactusContactFormTitle' %}</div>
 
             <div class="form-box">
                 <form class="form" method="POST">
                     {% csrf_token %}
 
                     <div class="contact-info">
-                        <input type="text" name="fullname" placeholder="ПIБ...">
-                        <input type="text" name="contact" placeholder="Ваш контакт...">
+                        <input type="text" name="fullname" placeholder="{% trans 'ContactusContactFormName' %}">
+                        <input type="text" name="contact" placeholder="{% trans 'ContactusContactFormContact' %}">
                     </div>
 
-                    <textarea name="message" placeholder="Ваше повідомлення..."></textarea>
+                    <textarea name="message" placeholder="{% trans 'ContactusContactFormMessage' %}"></textarea>
 
                     <div class="button-box">
-                        <button class="send-button" type="submit">Відправити</button>
+                        <button class="send-button" type="submit">{% trans 'ContactusContactFormSend' %}</button>
                     </div>
                 </form>
             </div>

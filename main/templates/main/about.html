@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block styles %}
@@ -15,17 +16,14 @@
     >
         <div class="container">
             <div class="description">
-                ТОВ «НГМЗ» — це сучасне машинобудівне підприємство, яке зберігає та розвиває інженерні традиції, виготовляючи надійне й високоякісне обладнання для гірничодобувної, вугільної та металургійної промисловості.
+                {% trans 'AboutpageHeaderBody' %}
             </div>
         </div>
     </div>
 
     <div class="main-content container-wrapper">
         <div class="container">
-            <div class="small-description">
-                Протягом багатьох років «НГМЗ» займає провідні позиції в галузі проєктування, виробництва та ремонту обладнання для гірничих і збагачувальних підприємств. Наша команда — це інженери, конструктори, технологи та виробники з великим досвідом і відданістю своїй справі.
-                <b>Надійність. Якість. Інновації. Ці принципи — основа нашої роботи.</b>
-            </div>
+            <div class="small-description">{% trans 'AboutpageSmallDescription' %}</div>
 
             <div class="photo-container">
                 <div class="main-photo" style="background-image: url('{% static "main/media/about_page_blocks/main.jpg" %}')"></div>
@@ -41,9 +39,7 @@
                     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
                     url({% static 'main/media/about_us_background_2.png' %})
                 ">
-                <div class="text">
-                    Кожен виріб — це результат точного розрахунку, відпрацьованої технології та суворого контролю.
-                </div>
+                <div class="text">{% trans 'AboutpageSlogan' %}</div>
             </div>
 
             <div class="slideshow-container">
@@ -60,7 +56,7 @@
 
             <div class="certificates">
                 <div class="active-groud-title" onclick="openCloseCertMenu();">
-                    <a>Наші сертифікати</a>
+                    <a>{% trans 'AboutpageOurCertificates' %}</a>
                     <img class="menu-icon" src="{% static 'main/media/icons/block-menu.png' %}">
                 </div>
 

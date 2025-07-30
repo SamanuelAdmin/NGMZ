@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-27 23:58+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# MAIN DICT
+msgid "PHONE"
+msgstr "Phone"
+msgid "SEARCH"
+msgstr "Search"
+msgid "ABCompanyName"
+msgstr "NGMZ"
+
+# ===============================================
+# main/base.html file
+# ===============================================
+
+# MAIN MENU
+msgid "MainmenuMainPage"
+msgstr "Home"
+msgid "MainmenuProductionPage"
+msgstr "Products"
+msgid "MainmenuAboutPage"
+msgstr "About Us"
+msgid "MainmenuContactsPage"
+msgstr "Contacts"
+
+# FOOTER
+msgid "FooterName"
+msgstr "Novhorod Hydraulic and Mechanical Plant"
+
+# MESSAGE (REQUEST FOR CONTACT)
+msgid "MessageRequestAccepted"
+msgstr "Your request has been sent, we will contact you shortly."
+
+# TITLES
+msgid "TitleMainPage"
+msgstr "Home"
+msgid "TitleProductsPage"
+msgstr "Products"
+msgid "TitleAboutPage"
+msgstr "About Us"
+msgid "TitleContactsPage"
+msgstr "Contacts"
+
+# ===============================================
+# main/index.html file
+# ===============================================
+
+# HEADER
+msgid "MainpageHeaderTitle"
+msgstr "Innovative Solutions for the Future"
+msgid "MainpageHeaderBodyTag1"
+msgstr "Only <a class=\"selected smartlink\">high-quality materials</a> are used in production, and all technological documentation standards and requirements are strictly followed."
+msgid "MainpageHeaderBodyTag2"
+msgstr "<a class=\"selected smartlink\">Modern equipment</a> with an integrated quality management system is used for manufacturing products."
+msgid "MainpageHeaderBodyTag3"
+msgstr "<a class=\"selected smartlink\">Repair of industrial equipment</a> is also possible, including capital repairs."
+msgid "MainpageHeaderBodyTag4"
+msgstr "LLC \"NGMZ\" is certified in the <a class=\"selected smartlink\">ISO quality management system</a>."
+
+# MAIN TEXT
+msgid "MainpageMainText"
+msgstr "<b>LLC \"Novhorod Hydraulic and Mechanical Plant\"</b> is a leading manufacturer of equipment for the mining, coal, metallurgical, and energy industries. In its production and technical activities, the plant uses modern high-tech metalworking and thermal equipment to perform turning, milling, slotting, grinding, and band-sawing technological operations in order to produce high-quality, including unique, engineering products and perform other complex engineering and technical work. We adhere to the standards and requirements of design and technological documentation, technical conditions, and state standards, which guarantees the reliability and durability of our products. Ensuring quality during production and strictly fulfilling contractual obligations have become effective factors in forming stable long-term business relations between LLC \"NGMZ\" and mining and energy enterprises of Ukraine."
+
+# SLOGAN
+msgid "MainpageSlogan"
+msgstr "Your safety, high quality, and productivity are our top priorities. We offer a comprehensive approach to solving your production tasks."
+
+# CONTACT US
+msgid "MainpageContactUsTitle"
+msgstr "We are always interested in projects of any level of complexity and look forward to further cooperation."
+msgid "MainpageContactUsBody"
+msgstr "You can contact us through the following contacts:"
+
+# ===============================================
+# main/contacts.html file
+# ===============================================
+
+msgid "ContactspageContactUs"
+msgstr "Contact Us"
+
+# TIMETABLE
+msgid "ContactspageTimetableTitle"
+msgstr "Working hours (EN)"
+msgid "TimetableMon"
+msgstr "Monday"
+msgid "TimetableTue"
+msgstr "Tuesday"
+msgid "TimetableWed"
+msgstr "Wednesday"
+msgid "TimetableThu"
+msgstr "Thursday"
+msgid "TimetableFri"
+msgstr "Friday"
+msgid "TimetableSat"
+msgstr "Saturday"
+msgid "TimetableSun"
+msgstr "Sunday"
+msgid "TimetableClosed"
+msgstr "Closed"
+
+# CONTACT FORM
+msgid "ContactusContactFormTitle"
+msgstr "Or you can leave a message and we will contact you"
+msgid "ContactusContactFormName"
+msgstr "Full name..."
+msgid "ContactusContactFormContact"
+msgstr "Your contact..."
+msgid "ContactusContactFormMessage"
+msgstr "Your message..."
+msgid "ContactusContactFormSend"
+msgstr "Send"
+
+
+# ===============================================
+# main/about.html file
+# ===============================================
+
+# HEADER
+msgid "AboutpageHeaderBody"
+msgstr "LLC \"NGMZ\" is a modern engineering enterprise that preserves and develops engineering traditions, manufacturing reliable and high-quality equipment for the mining, coal, and metallurgical industries."
+
+# BODY
+msgid "AboutpageSmallDescription"
+msgstr "For many years, \"NGMZ\" has held leading positions in the design, production, and repair of equipment for mining and beneficiation enterprises. Our team includes engineers, designers, technologists, and manufacturers with great experience and dedication to their work. <b>Reliability. Quality. Innovation. These principles form the basis of our work.</b>"
+msgid "AboutpageSlogan"
+msgstr "Every product is the result of precise calculation, refined technology, and strict quality control."
+msgid "AboutpageOurCertificates"
+msgstr "Our Certificates"
+
+
+# ===============================================
+# main/products.html file
+# ===============================================
+
+# SORTING
+msgid "ProductspageSortBy"
+msgstr "Sort by"
+msgid "ProductspageSortByDate"
+msgstr "By date added"
+msgid "ProductspageSortByName"
+msgstr "By name (A-Z)"
+msgid "ProductspageSortByMName"
+msgstr "By name (Z-A)"
+
+msgid "ProductspageSearchResult"
+msgstr "Search result for: "
+
+msgid "Сторінка %(cpage)d з %(pages)d"
+msgstr "Page %(cpage)d of %(pages)d"

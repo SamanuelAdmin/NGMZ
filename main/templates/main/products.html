@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
 
 
 {% block styles %}
@@ -13,7 +14,7 @@
 
             <div class="control-menu">
                 <div class="sort" method="GET">
-                    <label for="sort" class="text">Сортувати за: </label>
+                    <label for="sort" class="text">{% trans 'ProductspageSortBy' %}: </label>
 
                     <select name="sort" id="sort" class="sort-selector" onchange="changePathParams('sort', this.value);">
                         {% for sortType in availableSortTypes %}
@@ -87,7 +88,7 @@
                         <div class="page" onclick="changePathParams('page', '{{ products.previous_page_number }}');">« Назад</div>
                     {% endif %}
 
-                    <div class="page selected">Сторінка {{ products.number }} з {{ maxPages }}</div>
+                    <div class="page selected">{{ currentPageString }}</div>
 
                     {% if products.has_next %}
                         <div class="page" onclick="changePathParams('page', '{{ products.next_page_number }}');">Вперед »</div>

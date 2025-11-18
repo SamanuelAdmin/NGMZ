@@ -1,0 +1,58 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="preview-box container-wrapper" style="background-image: url({% static 'main/media/slider/slider1.jpg' %})">
+        <div class="preview container">
+            <div class="title">
+                {% trans 'MainpageHeaderTitle' %}
+            </div>
+
+            <div class="body">
+                <li class="el">{% trans 'MainpageHeaderBodyTag1' %}</li>
+                <li class="el">{% trans 'MainpageHeaderBodyTag2' %}</li>
+                <li class="el">{% trans 'MainpageHeaderBodyTag3' %}</li>
+                <li class="el">{% trans 'MainpageHeaderBodyTag4' %}</li>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="main-info container">
+            <p class="text first-text">{% trans 'MainpageMainText' %}</p>
+        </div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="example-photos container">
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/4.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/3.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/2.jpg' %}')"></div>
+            <div class="photo" style="background-image: url('{% static 'main/media/main_page/1.jpg' %}')"></div>
+        </div>
+    </div>
+
+    <div class="banner container-wrapper" style="background-image: url({% static 'main/media/main_page_banner.png' %})">
+        <div class="container">
+            <div class="title">{% trans 'MainpageSlogan' %}</div>
+        </div>
+    </div>
+
+    <div class="contact-us container-wrapper">
+        <div class="container">
+             <p>{% trans 'MainpageContactUsTitle' %}</p>
+            <b>{% trans 'MainpageContactUsBody' %}</b>
+
+            <div class="contacts">
+                <a class="number" href="tel:+380503266872">+38 (050) 326-68-72</a>
+                <a class="number" href="tel:+380995448606">+38 (099) 544-86-06</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,384 @@
+html {
+    font-size: 16px; /* базовая единица = 1rem */
+}
+
+div {
+    font-size: 1.2rem; /* вместо 19px */
+}
+
+.preview .container .description {
+    font-size: 2rem; /* 32px */
+}
+
+
+
+.preview {
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+
+        .title {
+            width: 100%;
+            font-weight: 550;
+            font-size: 46px;
+            color: var(--orange);
+        }
+
+        .description {
+            width: 100%;
+            font-weight: 350;
+            font-size: 32px;
+            color: var(--white);
+        }
+    }
+}
+
+.slogan {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    color: var(--gray);
+}
+
+.main-content {
+    margin-top: 70px;
+    color: var(--black);
+    word-spacing: 3px;
+    font-size: 19px;
+    line-height: 1.5;
+
+    .container {
+        div {
+            word-spacing: 3px;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        ul {
+            padding: 6px 0 10px 0;
+
+            li {
+                list-style-type: none;
+                font-weight: 370;
+
+                &::before {
+                    padding: 0 5px;
+                    content: '⚙';
+                }
+            }
+        }
+
+        .selected {
+            border-bottom: 1px var(--gray) solid;
+        }
+
+        .title {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-weight: 500;
+
+            &:hover {
+                color: var(--metal);
+            }
+
+            &::before {
+                content: '➤';
+                color: var(--gray);
+                padding-right: 10px;
+            }
+        }
+
+        .smtitle {
+            font-weight: 450;
+        }
+
+        .small-description {
+            padding-bottom: 20px;
+        }
+
+        .our-production {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 30px;
+            /*flex-wrap: wrap;*/
+
+            img {
+                border: 1px var(--metal) solid;
+            }
+        }
+
+        .production-slogan {
+            margin: 60px 0 70px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+
+            .text {
+                padding: 40px;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 350;
+                color: var(--white);
+
+                &:hover {
+                    color: var(--orange);
+                }
+            }
+        }
+
+        .fixing-and-unique {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 6fr 4fr;
+            gap: 50px;
+            padding-bottom: 30px;
+            margin-bottom: 70px;
+            border-bottom: 1px var(--gray) solid;
+            /*gap: 50px;*/
+
+            img {
+                justify-self: center;
+                align-self: center;
+                min-height: 250px;
+                border: 1px var(--metal) solid;
+            }
+        }
+
+        .photo-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+
+            div {
+                aspect-ratio: 1 / 0.7;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .main-photo {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+
+        .slideshow-container {
+            width: auto;
+            height: 50vh;
+            max-height: 50vh;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            display: flex;
+            z-index: 0;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--metal);
+
+            /* Hide the images by default */
+            .mySlides {
+                display: none;
+            }
+
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 1.5px 1.5px 0;
+                background-color: rgba(0, 0, 0, 0.4);
+                user-select: none;
+
+                &:hover, &:hover {
+                    background-color: rgba(0,0,0,0.8);
+                }
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .active {
+                background-color: #717171;
+            }
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+        }
+
+
+        .certificates {
+            margin: 100px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .active-groud-title {
+                width: 100%;
+                max-width: calc(100% - 40px);
+                padding: 20px;
+                font-size: 20px;
+                letter-spacing: 0.5px;
+                font-weight: 450;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                border: 2px var(--metal) solid;
+
+                .menu-icon {
+                    width: 30px;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                }
+            }
+
+            .photos {
+                width: 100%;
+                display: none;
+                align-items: start;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                transition: display 1s ease;
+
+                img {
+                    max-width: 30%;
+                    transition: opacity 0.5s ease;
+                }
+            }
+        }
+
+        .why-we {
+            margin-bottom: 100px;
+
+            ul {
+                padding: 15px;
+
+                li {
+                    padding: 0 6px;
+
+                    &::before {
+                        padding-left: 12px;
+                        content: '✅';
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* * {box-sizing:border-box} */
+
+
+
+@media screen and (max-width: 875px) {
+    .main-content .container .photo-container {
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .preview {
+        .container {
+            .description {
+                font-size: 28px;
+            }
+        }
+    }
+
+
+    .main-content .container .photo-container {
+        grid-template-rows: repeat(4, 1fr);
+
+        .main-photo {
+            grid-column: span 3;
+        }
+
+        div {
+            aspect-ratio: 1 / 0.5;
+        }
+
+        div:last-of-type {
+            grid-column: span 2;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .preview {
+        .container {
+            .description {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .main-content .container .photo-container {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+
+        .main-photo {
+            grid-column: span 2;
+        }
+
+        div {
+            aspect-ratio: 1 / 0.7;
+        }
+
+        div:last-of-type {
+            grid-column: span 2;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .preview {
+        .container {
+            .description {
+                font-size: 18px;
+            }
+        }
+    }
+}

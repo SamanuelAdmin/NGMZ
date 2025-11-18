@@ -1,0 +1,189 @@
+.product-info {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+
+    .preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 4fr;
+
+        .title {
+            width: calc(100% - 30px);
+            max-width: calc(100% - 30px);
+            box-sizing: border-box;
+            margin: 15px 0 10px 30px;
+            font-size: 30px;
+            font-weight: 450;
+            letter-spacing: 1px;
+            border-bottom: 1px var(--metal) solid;
+            padding-bottom: 5px;
+        }
+
+        .description {
+            width: calc(100% - 30px);
+            max-width: calc(100% - 30px);
+            margin: 10px 0 0 30px;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.2px;
+        }
+
+        .image {
+            grid-row: span 2;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .photo {
+                max-width: 90%;
+                max-height: 90%;
+            }
+        }
+    }
+
+    .table-wrapper {
+        width: calc(100% - 20px);
+        height: auto;
+        margin: 10px 10px 100px;
+        border-collapse: collapse;
+        overflow-x: auto;
+
+        .excel-viewer {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            min-width: 700px;
+            border: 2px var(--black) solid;
+            padding: 5px 10px;
+            border-collapse: collapse;
+
+            tbody {
+                tr {
+                    font-size: 100%;
+                    letter-spacing: 0.4px;
+
+                    td {
+                        padding: 5px 10px;
+                    }
+
+                    &:nth-child(1) {
+                        td {
+                            border-bottom: 3px var(--black) solid;
+                            border-left: 2px var(--black) solid;
+                            text-align: center;
+                        }
+
+                        background-color: var(--blue) !important;
+                    }
+
+                    &:nth-child(2n) {
+                        background-color: rgba(0, 0, 0, 0.05);
+                    }
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                    }
+
+                    td:nth-child(1) {
+                        font-weight: 480;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .product-info .preview {
+        .title {
+            font-size: 28px;
+        }
+
+        .description {
+            font-size: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .product-info {
+        margin-top: 50px;
+    }
+
+    .product-info .preview {
+        padding: 10px;
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+        flex-direction: column;
+
+        .image {
+            order: 3;
+
+            .photo {
+                max-width: 500px;
+            }
+        }
+
+        .title {
+            margin-bottom: 15px;
+            margin-left: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        .description {
+            margin-left: 0;
+            margin-bottom: 30px;
+            font-size: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .product-info .table-wrapper .excel-viewer {
+        padding: 3px 6px;
+
+        tbody {
+            tr {
+                letter-spacing: 0;
+
+                td {
+                    padding: 3px 6px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .preview .image {
+        min-width: 0;
+
+        .photo {
+            width: 100%;
+        }
+    }
+
+    .product-info .table-wrapper .excel-viewer {
+        overflow-x: scroll;
+
+        tbody {
+            tr {
+                td {
+                    padding: 2px 5px;
+                }
+            }
+        }
+    }
+}
+

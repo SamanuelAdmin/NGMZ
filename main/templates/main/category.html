@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/category.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="categories-for-products container-wrapper">
+        <div class="categories container">
+            {% for cat in categories %}
+                {% if cat.parent == None %}
+                    <div class="category-group">
+                        <a {% if not cat.subcat.all %}href="{% url 'category' cat.tag %}"{% endif %} class="category-title">{{ cat.name }}</a>
+    
+                        {% for subCat in cat.subcat.all %}
+                            <a class="category"
+                                href="{% url 'category' subCat.tag %}">
+                                {{ subCat.name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

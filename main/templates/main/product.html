@@ -1,0 +1,32 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/product.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="container-wrapper">
+        <div class="product-info container">
+            <div class="preview">
+                <div class="image">
+                    <img src="{{ media_url }}{{ product.photo }}" class="photo" onclick="viewImage(this);">
+                </div>
+                <div class="title">{{ product.name }}</div>
+                <div class="description">{{ product.description }}</div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="excel-viewer" id="excelViewer"></table>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'main/js/excel_viewer.js' %}"></script>
+    <script>
+        getFileFromServer('{{ media_url }}{{ product.characteristics }}');
+    </script>
+{% endblock %}

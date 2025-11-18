@@ -1,0 +1,147 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/contacts.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="main-info container-wrapper"
+         style="
+                 background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+                 url({% static 'main/media/contacts_page_background.png' %});
+             ">
+        <div class="main-block container">
+            <div class="contacts">
+                <div class="title">{% trans 'ContactspageContactUs' %}</div>
+                <div class="contacts-section">
+                    <div class="section-title">
+                        <img class="icon" src="{% static 'main/media/icons/phone_2.png' %}">
+                        <div class="text">{% trans 'PHONE' %}</div>
+                    </div>
+
+                    <div class="section-body">
+                        <a class="contact" href="tel:+380503266872">+38 (050) 326-68-72</a>
+                        <a class="contact" href="tel:+380506579067">+38 (050) 657-90-67</a>
+                        <a class="contact" href="tel:+380995448606">+38 (099) 544-86-06</a>
+                    </div>
+                </div>
+
+                <div class="contacts-section">
+                    <div class="section-title">
+                        <img class="icon" src="{% static 'main/media/icons/gmail.png' %}">
+                        <div class="text">Email</div>
+                    </div>
+
+                    <div class="section-body">
+                        <a class="contact" href="mailto:ngmzavod@gmail.com">ngmzavod@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contacts-section">
+                    <div class="section-title">
+                        <img class="icon" src="{% static 'main/media/icons/telegram_2.png' %}">
+                        <div class="text">Telegram</div>
+                    </div>
+
+                    <div class="section-body">
+                        <a class="contact" href="https://t.me/Den4ik_geymor">@Den4ik_geymor</a>
+                    </div>
+                </div>
+
+                <div class="contacts-section">
+                    <div class="section-title">
+                        <img class="icon" src="{% static 'main/media/icons/viber_2.png' %}">
+                        <div class="text">Viber</div>
+                    </div>
+
+                    <div class="section-body">
+                        <a class="contact" href="viber://chat?number=380995448606">+380 99 544 86 06</a>
+                    </div>
+                </div>
+            </div>
+
+{#            <div class="empty"></div>#}
+
+            <div class="timetable">
+                <div class="title">{% trans 'ContactspageTimetableTitle' %}</div>
+                <div class="body">
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableMon' %}</div>
+                        <div class="from-to">9:00 - 17:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableTue' %}</div>
+                        <div class="from-to">9:00 - 17:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableWed' %}</div>
+                        <div class="from-to">9:00 - 17:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableThu' %}</div>
+                        <div class="from-to">9:00 - 17:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableFri' %}</div>
+                        <div class="from-to">9:00 - 17:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableSat' %}</div>
+                        <div class="from-to">10:00 - 15:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="day">{% trans 'TimetableSun' %}</div>
+                        <div class="from-to">{% trans 'TimetableClosed' %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="leave-message container">
+            <div class="title">{% trans 'ContactusContactFormTitle' %}</div>
+
+            <div class="form-box">
+                <form class="form" method="POST">
+                    {% csrf_token %}
+
+                    <div class="contact-info">
+                        <input type="text" name="fullname" placeholder="{% trans 'ContactusContactFormName' %}">
+                        <input type="text" name="contact" placeholder="{% trans 'ContactusContactFormContact' %}">
+                    </div>
+
+                    <textarea name="message" placeholder="{% trans 'ContactusContactFormMessage' %}"></textarea>
+
+                    <div class="button-box">
+                        <button class="send-button" type="submit">{% trans 'ContactusContactFormSend' %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{#    <div class="container-wrapper">#}
+{#        <div class="leave-message container">#}
+{#            <div class="title">Або можете залишити повідомлення і ми з вами зв'яжемося</div>#}
+{##}
+{#            <div class="form-box">#}
+{#                <form class="form" method="POST">#}
+{#                    {% csrf_token %}#}
+{##}
+{#                    <div class="contact-info">#}
+{#                        <input type="text" name="fullname" placeholder="ПIБ...">#}
+{#                        <input type="text" name="contact" placeholder="Ваш контакт...">#}
+{#                    </div>#}
+{##}
+{#                    <textarea name="message" placeholder="Ваше повідомлення..."></textarea>#}
+{##}
+{#                    <div class="button-box">#}
+{#                        <button class="send-button" type="submit">Відправити</button>#}
+{#                    </div>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{%  endblock %}

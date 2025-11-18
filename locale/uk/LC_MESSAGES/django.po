@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-27 23:58+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+# MAIN DICT
+# this is simple words and phaces
+msgid "PHONE"
+msgstr "Телефон"
+msgid "SEARCH"
+msgstr "Пошук"
+msgid "ABCompanyName"
+msgstr "НГМЗ"
+
+
+# ===============================================
+# main/base.html file
+# ===============================================
+
+# MAIN MENU
+msgid "MainmenuMainPage"
+msgstr "Головна"
+msgid "MainmenuProductionPage"
+msgstr "Продукція"
+msgid "MainmenuAboutPage"
+msgstr "Про нас"
+msgid "MainmenuContactsPage"
+msgstr "Контакти"
+
+# FOOTER
+msgid "FooterName"
+msgstr "Новгородський гiдро-механiчний завод"
+
+# MESSAGE (REQUEST FOR CONTACT)
+msgid "MessageRequestAccepted"
+msgstr "Запит надіслано, ми зв'яжемось з вами найближчим часом."
+
+# TITLES
+msgid "TitleMainPage"
+msgstr "Головна"
+msgid "TitleProductsPage"
+msgstr "Продукція"
+msgid "TitleAboutPage"
+msgstr "Про нас"
+msgid "TitleContactsPage"
+msgstr "Контакти"
+
+
+
+# ===============================================
+# main/index.html file
+# ===============================================
+# HEADER
+msgid "MainpageHeaderTitle"
+msgstr "Інноваційні рішення для майбутнього"
+msgid "MainpageHeaderBodyTag1"
+msgstr "У виробництві використовуються лише <a class=\"selected smartlink\">високоякісні матеріали</a>, суворо дотримуються норми та вимоги технологічної документації."
+msgid "MainpageHeaderBodyTag2"
+msgstr "<a class=\"selected smartlink\">Сучасне обладнення</a> з інтегрованою системою управління якістю для виробничих продуктів."
+msgid "MainpageHeaderBodyTag3"
+msgstr "Існує також <a class=\"selected smartlink\">можливість ремонту</a> промислового обладнання, включаючи капітальний ремонт."
+msgid "MainpageHeaderBodyTag4"
+msgstr "ТОВ \"НГМЗ\" має сертефікат на <a class=\"selected smartlink\">систему управління якістю ISO</a>."
+
+
+# MAIN TEXT
+msgid "MainpageMainText"
+msgstr "<b>ТОВ «Новгородський гідро-механічний завод»</b> є провідним виробником обладнання для гірничодобувної, вугільної, металургійної промисловості та енергетичної галузі. Завод в виробничо-технічній діяльності  використовує сучасне високотехнологічне  металообробне  та термічне обладнання для виконання токарних, фрезерувальних, зубодовбальних, шліфувальних та стрічково-розпилювальних технологічних операцій з метою виробництва високоякісної, в тому числі й унікальної, машинобудівної  продукції та виконання інших складних  інженерно-технічних  робіт. Ми дотримуємося норм та вимог конструкторсько-технологічної документації, технічних умов і державних стандартів, що гарантує надійність й довговічність нашої продукції. Забезпечення якості під час виробництва та безумовне виконання договірних зобов'язань стали дієвими чинниками формування стійких довгострокових господарських взаємовідносин ТОВ \"НГМЗ\" із гірничорудними та енергетичними підприємствами України."
+
+# SLOGAN
+msgid "MainpageSlogan"
+msgstr "Ваша безпека, висока якість та продуктивність – наші головні пріоритети. Ми пропонуємо комплексний підхід у вирішенні Ваших виробничих завдань."
+
+# CONTACT US
+msgid "MainpageContactUsTitle"
+msgstr "Ми завжди зацікавлені в проектах будь якого рівня складності та сподіваємося на подальшу співпрацю."
+msgid "MainpageContactUsBody"
+msgstr "Ви можете зв'язатися з нами за цими контактами:"
+
+
+
+# ===============================================
+# main/contacts.html file
+# ===============================================
+
+msgid "ContactspageContactUs"
+msgstr "Зв'яжіться з нами"
+
+# TIMETABLE
+msgid "ContactspageTimetableTitle"
+msgstr "Графік роботи (UA)"
+msgid "TimetableMon"
+msgstr "Понеділок"
+msgid "TimetableTue"
+msgstr "Вівторок"
+msgid "TimetableWed"
+msgstr "Середа"
+msgid "TimetableThu"
+msgstr "Четвер"
+msgid "TimetableFri"
+msgstr "П'ятниця"
+msgid "TimetableSat"
+msgstr "Субота"
+msgid "TimetableSun"
+msgstr "Неділя"
+msgid "TimetableClosed"
+msgstr "Вихідний"
+
+# CONTACT FORM
+msgid "ContactusContactFormTitle"
+msgstr "Або можете залишити повідомлення і ми з вами зв'яжемося"
+msgid "ContactusContactFormName"
+msgstr "ПIБ..."
+msgid "ContactusContactFormContact"
+msgstr "Ваш контакт..."
+msgid "ContactusContactFormMessage"
+msgstr "Ваше повідомлення..."
+msgid "ContactusContactFormSend"
+msgstr "Відправити"
+
+
+
+# ===============================================
+# main/about.html file
+# ===============================================
+# HEADER
+msgid "AboutpageHeaderBody"
+msgstr " ТОВ «НГМЗ» — це сучасне машинобудівне підприємство, яке зберігає та розвиває інженерні традиції, виготовляючи надійне й високоякісне обладнання для гірничодобувної, вугільної та металургійної промисловості. "
+
+# BODY
+msgid "AboutpageSmallDescription"
+msgstr "Протягом багатьох років «НГМЗ» займає провідні позиції в галузі проєктування, виробництва та ремонту обладнання для гірничих і збагачувальних підприємств. Наша команда — це інженери, конструктори, технологи та виробники з великим досвідом і відданістю своїй справі. <b>Надійність. Якість. Інновації. Ці принципи — основа нашої роботи.</b>"
+msgid "AboutpageSlogan"
+msgstr "Кожен виріб — це результат точного розрахунку, відпрацьованої технології та суворого контролю. "
+msgid "AboutpageOurCertificates"
+msgstr "Наші сертифікати"
+
+
+
+# ===============================================
+# main/products.html file
+# ===============================================
+
+# SORTING
+msgid "ProductspageSortBy"
+msgstr "Сортувати за"
+msgid "ProductspageSortByDate"
+msgstr "За датою розміщення"
+msgid "ProductspageSortByName"
+msgstr "За назвою (A-Z)"
+msgid "ProductspageSortByMName"
+msgstr "За назвою (Z-A)"
+
+msgid "ProductspageSearchResult"
+msgstr "Результат за запитом: "
